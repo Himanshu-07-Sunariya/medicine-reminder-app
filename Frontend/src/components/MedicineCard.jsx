@@ -11,11 +11,8 @@ function MedicineCard({ name, time, dosage, status }) {
       }}
     >
       <h3>{name}</h3>
-
       <p>Time: {time}</p>
-
       <p>Dosage: {dosage}</p>
-
       <p>Status: {status}</p>
     </div>
   );

@@ -1,9 +1,11 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Dashboard from './components/Dashboard'
+import AddMedicine from './components/AddMedicine'
+import { useState } from 'react'  
 
 const App = () => {
-  const medicines = [
+  const [medicines, setMedicines] = useState([
     {
       id: 1,
       name: "Paracetamol",
@@ -25,11 +27,15 @@ const App = () => {
       dosage: "20 Units",
       status: "Pending",
     },
-  ];
+  ]);
   
   return (
     <div>
       <Navbar />
+      <AddMedicine
+        medicines={medicines}
+        setMedicines={setMedicines}
+      />
       <Dashboard medicines={medicines} /> 
     </div>
   )
