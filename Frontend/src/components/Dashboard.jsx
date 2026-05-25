@@ -1,13 +1,21 @@
-import React from 'react'
+import MedicineCard from "./MedicineCard";
 
-const Dashboard = () => {
+function Dashboard({ medicines }) {
   return (
     <div>
-        Today's Medicines
+      <h2>Today's Medicines</h2>
 
-        No medicines added
+      {medicines.map((medicine) => (
+        <MedicineCard
+          key={medicine.id}
+          name={medicine.name}
+          time={medicine.time}
+          dosage={medicine.dosage}
+          status={medicine.status}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;

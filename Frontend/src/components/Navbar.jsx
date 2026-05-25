@@ -1,14 +1,17 @@
 import React from 'react'
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <div>
-        Medicine Reminder App
-        Dashboard
-        Add Medicine
-        Reminders
-    </div>
-  )
+    <nav>
+      <h1>Medicine Reminder App</h1>
+
+      <ul style={{ display: "flex", gap: "20px", listStyle: "none" }}>
+        <li>Dashboard</li>
+        <li>Add Medicine</li>
+        <li>Reminders</li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar
